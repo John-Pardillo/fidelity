@@ -1,0 +1,60 @@
+/**
+* Name: John Andrebon B. Pardillo 
+* Section: IT DEPT
+* Year: 4th Year 
+*/
+
+
+import java.util.Scanner;
+
+public class main{
+
+    
+
+    public static void main(String[] args) {
+
+        Scanner in = new Scanner(System.in);
+
+        String answer;                     
+
+        int grade, grades = 0, cont, count = 0;
+
+        
+
+        do {                                
+
+            cont = 0;
+
+            System.out.println("Yes or No?");
+
+            answer = in.nextLine();
+
+            if (answer.equalsIgnoreCase("yes")) {
+
+                cont += 1;
+
+                System.out.println("Enter grade: ");
+
+                grade = in.nextInt();
+
+                in.nextLine();
+
+                grades += grade;
+
+                count += 1;
+
+            } else if (answer.equalsIgnoreCase("no")) {
+
+                cont = 0;
+
+                int avegrades = grades/ count;
+
+            System.out.println("average of the grades entered: " + avegrades);
+
+            }
+
+        } while (cont == 1);
+
+    }
+
+}
